@@ -111,3 +111,45 @@ h2 {
   display: block;
   margin: 0 auto; /* центр по горизонталі */
 }
+
+/* ===== Верхня панель ===== */
+.top-panel {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+
+/* ===== Загаданий персонаж ===== */
+.guessed-container {
+  flex: 1;
+}
+
+.guessed-slot {
+  min-height: 240px;
+}
+
+/* ===== Нотатки ===== */
+.notes-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-container textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* ===== Мобільна адаптація ===== */
+@media (max-width: 900px) {
+  .top-panel {
+    flex-direction: column;
+  }
+}
