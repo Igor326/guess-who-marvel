@@ -7,12 +7,22 @@
 </head>
 <body>
 
-  <header class="guessed-container">
+  <header class="top-panel">
+  <section class="guessed-container">
     <h2>Загаданий персонаж</h2>
     <div id="guessedCharacter" class="guessed-slot">
       <span class="placeholder">Ще не обрано</span>
     </div>
-  </header>
+  </section>
+
+  <section class="notes-container">
+    <h2>Нотатки</h2>
+    <textarea
+      id="notes"
+      placeholder="Записуй запитання, ознаки персонажа, логіку виключення..."
+    ></textarea>
+  </section>
+</header>
 
   <main>
     <section id="board" class="grid"></section>
