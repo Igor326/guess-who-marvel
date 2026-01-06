@@ -12,7 +12,7 @@ body {
 
 h2 {
   margin-bottom: 10px;
-}
+  }
 
 /* ===== Верхній блок ===== */
 .guessed-container {
@@ -25,6 +25,9 @@ h2 {
   align-items: center;    /* центр по вертикалі, якщо висота задана */
   min-height: 280px; 
 }
+
+
+
 
 .guessed-slot {
   width: 180px;
@@ -54,6 +57,7 @@ h2 {
   cursor: pointer;
   position: relative;
   transition: 0.2s;
+  height: 300px;
 }
 
 .card img {
@@ -67,9 +71,9 @@ h2 {
   font-size: 14px;
   text-align: center;
   word-wrap: break-word; /* перенос слів */
-  overflow: hidden;       /* обрізка зайвого */
+  overflow-y: auto;       /* обрізка зайвого */
   text-overflow: ellipsis; /* додає ... якщо текст довгий */
-  height: 40px;           /* обмежує висоту блоку */
+  height: 140px;           /* обмежує висоту блоку */
 }
 
 /* ===== Відкинута ===== */
@@ -107,4 +111,3 @@ h2 {
   display: block;
   margin: 0 auto; /* центр по горизонталі */
 }
-
