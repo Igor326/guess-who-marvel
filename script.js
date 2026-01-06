@@ -103,6 +103,14 @@ function toggleEliminate(card) {
 // Загадування персонажа
 // ======================
 function setGuessed(character, card) {
+  // Якщо клік по вже загадному персонажу — зняти вибір
+  if (guessedCharacterId === character.id) {
+    guessedCharacterId = null;
+    card.classList.remove("guessed");
+    clearGuessed();
+    return;
+  }
+
   // Зняти попередній guessed
   document
     .querySelectorAll(".card.guessed")
@@ -112,6 +120,12 @@ function setGuessed(character, card) {
   card.classList.add("guessed");
 
   renderGuessed(character);
+ 
+  function clearGuessed() {
+  guessedSlot.innerHTML = `
+    <span class="placeholder">Ще не обрано</span>
+  `;
+}
 }
 
 // ======================
@@ -131,8 +145,4 @@ function renderGuessed(character) {
 
 // ======================
 renderBoard();
-
-// ======================
-// Забираємо героїв з CSV
-// ======================
 
